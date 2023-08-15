@@ -22,7 +22,7 @@ const Create = () => {
       alert("Please login to upload products");
 
       history.push("/login");
-      
+
       return;
 
     }
@@ -31,7 +31,8 @@ const Create = () => {
 
       ref.getDownloadURL().then((url) => {
 
-        console.log(url);
+        let date = new Date()
+        date = date.toDateString()
 
         firebase.firestore().collection("products").add({
           name: name,
@@ -39,7 +40,7 @@ const Create = () => {
           price: price,
           imageUrl: url,
           userId: user.uid,
-          createdAt: new Date()
+          createdAt: date
         }).then(() => {
 
           history.push("/");
