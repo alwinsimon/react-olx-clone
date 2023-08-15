@@ -33,6 +33,12 @@ function Header() {
 
   }
 
+  const handleSellButtonClick = () => {
+
+    history.push('/create');
+
+  }
+
 
 
 
@@ -87,7 +93,7 @@ function Header() {
 
         { user && <span style={{ cursor: 'pointer' }} onClick={()=>handleLogout()}>Logout</span>}
 
-        <div className="sellMenu">
+        <div className="sellMenu" style={{ cursor: 'pointer' }} onClick={handleSellButtonClick} >
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
