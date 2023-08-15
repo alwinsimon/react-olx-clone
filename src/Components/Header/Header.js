@@ -35,6 +35,14 @@ function Header() {
 
   const handleSellButtonClick = () => {
 
+    if(!user){
+
+      history.push('/login');
+
+      return;
+
+    }
+
     history.push('/create');
 
   }
