@@ -10,6 +10,9 @@ import Home from './Pages/Home';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Create from './Pages/Create';
+import View from './Pages/ViewPost';
+
+import Post from './store/PostContext';
 
 
 
@@ -38,25 +41,31 @@ function App() {
   
     <div>
 
-      <Router>
-        
-        <Route exact path="/" >
-          <Home />
-        </Route>
+      <Post>
+        <Router>
+          
+          <Route exact path="/" >
+            <Home />
+          </Route>
 
-        <Route path="/signup" >
-          <Signup />
-        </Route>
+          <Route path="/signup" >
+            <Signup />
+          </Route>
 
-        <Route path="/login" >
-          <Login/>
-        </Route>
+          <Route path="/login" >
+            <Login/>
+          </Route>
 
-        <Route path="/create" >
-          <Create/>
-        </Route>
+          <Route path="/create" >
+            <Create/>
+          </Route>
 
-      </Router>
+          <Route path="/view" >
+            <View/>
+          </Route>
+
+        </Router>
+      </Post>
 
     </div>
   
