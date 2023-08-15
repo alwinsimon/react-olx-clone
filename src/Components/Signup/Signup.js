@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 
 import Logo from '../../olx-logo.png';
 import './Signup.css';
-import { FirebaseContext } from '../../store/FirebaseContext';
+import { FirebaseContext } from '../../store/Context';
 import {useHistory} from 'react-router-dom'
 
 export default function Signup() {
@@ -65,7 +65,7 @@ export default function Signup() {
 
       <div className="signupParentDiv">
 
-        <img width="200px" height="200px" src={Logo}></img>
+        <img width="200px" height="200px" src={Logo} alt='logo'></img>
 
         <form onSubmit={handleFormSubmission}>
 
