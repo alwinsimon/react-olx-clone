@@ -47,6 +47,13 @@ function Login() {
   }
 
 
+  const handleSignUpButtonClick = ()=>{
+
+    history.push("/signup");
+
+  }
+
+
 
 
 
@@ -100,7 +107,7 @@ function Login() {
 
         </form>
 
-        <a>Signup</a>
+        <button onClick={handleSignUpButtonClick}>SignUp</button>
 
       </div>
 

@@ -33,6 +33,20 @@ function Header() {
 
   }
 
+  const handleSellButtonClick = () => {
+
+    if(!user){
+
+      history.push('/login');
+
+      return;
+
+    }
+
+    history.push('/create');
+
+  }
+
 
 
 
@@ -77,7 +91,7 @@ function Header() {
 
           { user ? 
           
-            <span> `Hi,  ${user.displayName}` </span> 
+            <span> {`Hi,  ${user.displayName}`} </span> 
             : 
             <span style={{ cursor: 'pointer' }} onClick={()=>handleLoginButtonClick()}> Login </span> }
 
@@ -87,7 +101,7 @@ function Header() {
 
         { user && <span style={{ cursor: 'pointer' }} onClick={()=>handleLogout()}>Logout</span>}
 
-        <div className="sellMenu">
+        <div className="sellMenu" style={{ cursor: 'pointer' }} onClick={handleSellButtonClick} >
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
