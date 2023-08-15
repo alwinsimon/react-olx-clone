@@ -77,7 +77,7 @@ function Header() {
 
           { user ? 
           
-            <span> `Hi,  ${user.displayName}` </span> 
+            <span> {`Hi,  ${user.displayName}`} </span> 
             : 
             <span style={{ cursor: 'pointer' }} onClick={()=>handleLoginButtonClick()}> Login </span> }
 
