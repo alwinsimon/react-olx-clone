@@ -53,6 +53,12 @@ export default function Signup() {
   }
 
 
+  const handleLoginButtonClick = ()=>{
+
+    history.push("/login");
+
+  }
+
 
 
 
@@ -73,7 +79,7 @@ export default function Signup() {
 
           <br />
 
-          <input className="input" type="text" id="fname" name="name" placeholder = "Enter username" defaultValue="John" value={userName} onChange={(e)=>setUserName(e.target.value)} />
+          <input className="input" type="text" id="fname" name="name" placeholder = "Enter username" value={userName} onChange={(e)=>setUserName(e.target.value)} required />
 
           <br />
 
@@ -81,7 +87,7 @@ export default function Signup() {
 
           <br />
 
-          <input className="input" type="email" id="fname" name="email" placeholder = "Enter email" defaultValue="John" value={email} onChange={(e)=>setEmail(e.target.value)} />
+          <input className="input" type="email" id="fname" name="email" placeholder = "Enter email" value={email} onChange={(e)=>setEmail(e.target.value)} required />
 
           <br />
 
@@ -89,7 +95,7 @@ export default function Signup() {
 
           <br />
 
-          <input className="input" type="number" id="lname" name="phone" placeholder = "Enter phone" defaultValue="Doe" value={phone} onChange={(e)=>setPhone(e.target.value)} />
+          <input className="input" type="number" id="lname" name="phone" placeholder = "Enter phone" value={phone} onChange={(e)=>setPhone(e.target.value)} required />
 
           <br />
 
@@ -97,7 +103,7 @@ export default function Signup() {
 
           <br />
 
-          <input className="input" type="password" id="lname" name="password" placeholder = "Enter password" defaultValue="Doe" value={password} onChange={(e)=>setPassword(e.target.value)} />
+          <input className="input" type="password" id="lname" name="password" placeholder = "Enter password" value={password} onChange={(e)=>setPassword(e.target.value)} required />
 
           <br />
           <br />
@@ -106,7 +112,7 @@ export default function Signup() {
 
         </form>
 
-        <a>Login</a>
+        <button onClick={handleLoginButtonClick}>Login</button>
 
       </div>
 
