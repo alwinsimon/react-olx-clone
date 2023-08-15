@@ -25,7 +25,6 @@ export default function Signup() {
 
   }
 
-  require('dotenv').config();
 
 
 
